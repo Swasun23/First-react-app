@@ -3,6 +3,15 @@ import filtericon from "../assets/filter-icon.svg"
 import PropTypes from "prop-types";
 
 const Filterdock = ({selectedItems,setSelectedItems}) => {
+
+  const clearSelectedItems = () => {
+    setSelectedItems((prev) =>
+      Object.fromEntries(Object.keys(prev).map((key) => [key, false]))
+    );
+  };
+  
+  
+
   return (
     <>
     <div className="lg:hidden">
@@ -12,7 +21,7 @@ const Filterdock = ({selectedItems,setSelectedItems}) => {
       <div className="flex flex-col rounded-2xl border-1 border-gray-200 shadow-2xs bg-white">
         <div className="flex flex-row justify-start items-center mt-3 mx-5">
           <div className="font-extrabold text-lg">All filters</div>
-            <button className="relative left-15 border-1 border-purple-800 rounded-xl text-purple-800 font-bold font-sans-serif hover:bg-puple-800 hover:text-white hover:bg-purple-800 hover:cursor-pointer p-2 ">
+            <button className="relative left-15 border-1 border-purple-800 rounded-xl text-purple-800 font-bold font-sans-serif hover:bg-puple-800 hover:text-white hover:bg-purple-800 hover:cursor-pointer p-2 " onClick={clearSelectedItems}>
               Clear All
             </button>
         </div>
