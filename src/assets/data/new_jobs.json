@@ -1,0 +1,165 @@
+[
+    {
+        "companyLogo": "startup_logo",
+        "companyName": "Startup",
+        "jobLocation": "Bengaluru",
+        "jobRole": "Software Engineer",
+        "description": "Develop, test, and maintain software applications. Collaborate with cross-functional teams to deliver high-quality solutions.",
+        "nPositions": "1",
+        "roleType": "Full-time",
+        "pay": 700000
+    },
+    {
+        "companyLogo": "corporate_logo",
+        "companyName": "Corporate",
+        "jobLocation": "Mumbai",
+        "jobRole": "Data Analyst",
+        "description": "Analyze data and generate insights to support business decisions. Collaborate with teams to improve data quality and reporting.",
+        "nPositions": "1",
+        "roleType": "Part-time",
+        "pay": 500000,
+        "filterable":[
+            
+        ]
+    },
+    {
+        "companyLogo": "indian_mnc_logo",
+        "companyName": "Indian MNC",
+        "jobLocation": "Delhi NCR",
+        "jobRole": "Project Manager",
+        "description": "Manage projects from initiation to closure. Ensure project goals are met and stakeholders are satisfied.",
+        "nPositions": "1",
+        "roleType": "Contract",
+        "pay": 1000000
+    },
+    {
+        "companyLogo": "foreign_mnc_logo",
+        "companyName": "Foreign MNC",
+        "jobLocation": "Chennai",
+        "jobRole": "Marketing Specialist",
+        "description": "Develop and implement marketing strategies to promote products and services. Analyze market trends and customer feedback.",
+        "nPositions": "1",
+        "roleType": "Full-time",
+        "pay": 700000
+    },
+    {
+        "companyLogo": "corporate_logo",
+        "companyName": "Corporate",
+        "jobLocation": "Hyderabad",
+        "jobRole": "HR Manager",
+        "description": "Manage HR functions including recruitment, employee relations, and performance management. Ensure compliance with labor laws.",
+        "nPositions": "1",
+        "roleType": "Full-time",
+        "pay": 1000000
+    },
+    {
+        "companyLogo": "startup_logo",
+        "companyName": "Startup",
+        "jobLocation": "Kolkata",
+        "jobRole": "UX Designer",
+        "description": "Design user interfaces and experiences for web and mobile applications. Conduct user research and testing.",
+        "nPositions": "1",
+        "roleType": "Internship",
+        "pay": 300000
+    },
+    {
+        "companyLogo": "corporate_logo",
+        "companyName": "Corporate",
+        "jobLocation": "Ahmedabad",
+        "jobRole": "Sales Executive",
+        "description": "Drive sales and achieve targets. Build and maintain relationships with clients.",
+        "nPositions": "1",
+        "roleType": "Full-time",
+        "pay": 500000
+    },
+    {
+        "companyLogo": "foreign_mnc_logo",
+        "companyName": "Foreign MNC",
+        "jobLocation": "Bengaluru",
+        "jobRole": "Business Analyst",
+        "description": "Analyze business processes and identify areas for improvement. Collaborate with stakeholders to implement solutions.",
+        "nPositions": "1",
+        "roleType": "Part-time",
+        "pay": 700000
+    },
+    {
+        "companyLogo": "indian_mnc_logo",
+        "companyName": "Indian MNC",
+        "jobLocation": "Mumbai",
+        "jobRole": "Operations Manager",
+        "description": "Oversee daily operations and ensure efficiency. Manage teams and resources to achieve business goals.",
+        "nPositions": "1",
+        "roleType": "Full-time",
+        "pay": 1000000
+    },
+    {
+        "companyLogo": "startup_logo",
+        "companyName": "Startup",
+        "jobLocation": "Delhi NCR",
+        "jobRole": "Content Writer",
+        "description": "Create and edit content for various platforms. Ensure content is engaging and aligned with brand guidelines.",
+        "nPositions": "1",
+        "roleType": "Contract",
+        "pay": 300000
+    },
+    {
+        "companyLogo": "corporate_logo",
+        "companyName": "Corporate",
+        "jobLocation": "Chennai",
+        "jobRole": "Graphic Designer",
+        "description": "Design graphics for digital and print media. Collaborate with teams to create visually appealing content.",
+        "nPositions": "1",
+        "roleType": "Internship",
+        "pay": 300000
+    },
+    {
+        "companyLogo": "foreign_mnc_logo",
+        "companyName": "Foreign MNC",
+        "jobLocation": "Hyderabad",
+        "jobRole": "Network Engineer",
+        "description": "Design, implement, and maintain network infrastructure. Troubleshoot network issues and ensure security.",
+        "nPositions": "1",
+        "roleType": "Full-time",
+        "pay": 700000
+    },
+    {
+        "companyLogo": "indian_mnc_logo",
+        "companyName": "Indian MNC",
+        "jobLocation": "Kolkata",
+        "jobRole": "Product Manager",
+        "description": "Manage product lifecycle from concept to launch. Collaborate with teams to deliver high-quality products.",
+        "nPositions": "1",
+        "roleType": "Full-time",
+        "pay": 1000000
+    },
+    {
+        "companyLogo": "corporate_logo",
+        "companyName": "Corporate",
+        "jobLocation": "Ahmedabad",
+        "jobRole": "Financial Analyst",
+        "description": "Analyze financial data and provide insights to support business decisions. Prepare financial reports and forecasts.",
+        "nPositions": "1",
+        "roleType": "Part-time",
+        "pay": 500000
+    },
+    {
+        "companyLogo": "startup_logo",
+        "companyName": "Startup",
+        "jobLocation": "Bengaluru",
+        "jobRole": "Software Tester",
+        "description": "Test software applications to identify and resolve bugs. Ensure software quality and performance.",
+        "nPositions": "1",
+        "roleType": "Full-time",
+        "pay": 700000
+    },
+    {
+        "companyLogo": "corporate_logo",
+        "companyName": "Corporate",
+        "jobLocation": "Mumbai",
+        "jobRole": "Customer Support",
+        "description": "Provide support to customers and resolve their issues. Ensure customer satisfaction and maintain records.",
+        "nPositions": "1",
+        "roleType": "Contract",
+        "pay": 500000
+    }
+]

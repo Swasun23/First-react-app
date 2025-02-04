@@ -29,8 +29,12 @@ import jobrecom from "../assets/images/job-recommendation.jpg";
 import profilebld from "../assets/images/profile-building.jpg";
 import crconsult from "../assets/images/consultation.jpg";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div>
       <main className="flex flex-col min-h-screen bg-gray-100 w-full max-w-[2560px] min-w-0 mx-auto overflow-hidden">
@@ -76,7 +80,7 @@ const LandingPage = () => {
             </span>
           </p>
           <div className="flex flex-row justify-center items-center mt-5">
-            <button className="bg-purple-800 hover:scale-97 transition-transform duration-200 text-white font-bold py-2 px-4 rounded-xl">
+            <button className="bg-purple-800 hover:scale-97 transition-transform duration-200 text-white font-bold py-2 px-4 rounded-xl" onClick={() => navigate("/jobs")}>
               Browse Jobs
             </button>
             <div className="flex justify-center pl-3">

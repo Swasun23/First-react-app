@@ -1,6 +1,8 @@
 import CollapsibleChecklist from "./CollapsibleChecklist";
 import filtericon from "../assets/filter-icon.svg"
-const Filterdock = () => {
+import PropTypes from "prop-types";
+
+const Filterdock = ({selectedItems,setSelectedItems}) => {
   return (
     <>
     <div className="lg:hidden">
@@ -8,16 +10,11 @@ const Filterdock = () => {
     </div>
     <div className="hidden lg:block">
       <div className="flex flex-col rounded-2xl border-1 border-gray-200 shadow-2xs bg-white">
-        <div className="flex flex-col justify-start items-start mt-3 mx-5">
+        <div className="flex flex-row justify-start items-center mt-3 mx-5">
           <div className="font-extrabold text-lg">All filters</div>
-          <div className="flex flex-row justify-evenly space-x-3">
-            <button className="font-bold hover:cursor-pointer">
-              Apply Filters
-            </button>
-            <button className="border-1 border-purple-800 rounded-xl text-purple-800 font-bold font-sans-serif hover:bg-puple-800 hover:text-white hover:bg-purple-800 hover:cursor-pointer p-2 ">
+            <button className="relative left-15 border-1 border-purple-800 rounded-xl text-purple-800 font-bold font-sans-serif hover:bg-puple-800 hover:text-white hover:bg-purple-800 hover:cursor-pointer p-2 ">
               Clear All
             </button>
-          </div>
         </div>
         <div>
           <CollapsibleChecklist
@@ -28,6 +25,8 @@ const Filterdock = () => {
               { id: "jt-3", label: "Internship" },
               { id: "jt-4", label: "Contract" },
             ]}
+            selectedItems={selectedItems}
+            setSelectedItems={setSelectedItems}
           />
           <CollapsibleChecklist
             title="Company-type"
@@ -38,6 +37,8 @@ const Filterdock = () => {
               { id: "ct-4", label: "Corporate" },
               { id: "ct-5", label: "Others" },
             ]}
+            selectedItems={selectedItems}
+            setSelectedItems={setSelectedItems}
           />
           <CollapsibleChecklist
             title="Location"
@@ -50,6 +51,8 @@ const Filterdock = () => {
               { id: "l-6", label: "Chennai" },
               { id: "l-7", label: "Kolkata" },
             ]}
+            selectedItems={selectedItems}
+            setSelectedItems={setSelectedItems}
           />
           <CollapsibleChecklist
             title="Industry"
@@ -62,6 +65,8 @@ const Filterdock = () => {
               { id: "indsty-6", label: "Retail" },
               { id: "indsty-7", label: "Manufacturing" },
             ]}
+            selectedItems={selectedItems}
+            setSelectedItems={setSelectedItems}
           />
           <CollapsibleChecklist
             title="Salary"
@@ -72,6 +77,8 @@ const Filterdock = () => {
               { id: "slry-4", label: "7-10 Lakhs" },
               { id: "slry-5", label: "10+ Lakhs" },
             ]}
+            selectedItems={selectedItems}
+            setSelectedItems={setSelectedItems}
           />
           <CollapsibleChecklist
             title="Experience"
@@ -82,12 +89,18 @@ const Filterdock = () => {
               { id: "Exp-4", label: "5-7 years" },
               { id: "Exp-5", label: "7+ years" },
             ]}
+            selectedItems={selectedItems}
+            setSelectedItems={setSelectedItems}
           />
         </div>
       </div>
     </div>
     </>
   );
+};
+Filterdock.propTypes = {
+  selectedItems: PropTypes.object.isRequired,
+  setSelectedItems: PropTypes.func.isRequired,
 };
 
 export default Filterdock;

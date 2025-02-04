@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import Likeheart from './Like-heart';
+import { useNavigate } from "react-router-dom";
 
 const Jobcard = ({ companyLogo,companyName, jobLocation, jobRole, description, nPositions, roleType, pay }) => {
+
+  const navigate = useNavigate()
+
   return (
     <>
       <div className="flex flex-col justify-start p-2 w-45 md:w-70 bg-white rounded-lg hover:shadow-lg hover:bg-purple-800 hover:text-white duration-200 group">
@@ -46,7 +50,7 @@ const Jobcard = ({ companyLogo,companyName, jobLocation, jobRole, description, n
             ].map(({ text, bg, textColor }) => (
               <li
                 key={text}
-                className={`${bg} ${textColor} font-semibold m-1 p-1 text-center rounded-xl text-xs md:m-2 md:p-2 md:text-md group-hover:bg-purple-900 group-hover:text-white duration-200`}
+                className={`${bg} ${textColor} font-semibold m-1 p-1 text-center rounded-xl text-xs md:m-2 md:p-2 md:text-md group-hover:bg-purple-900 group-hover:text-white duration-200` }
               >
                 {text}
               </li>
@@ -57,7 +61,7 @@ const Jobcard = ({ companyLogo,companyName, jobLocation, jobRole, description, n
           <button className="bg-purple-800 text-white font-semibold rounded-lg p-0.5 hover:cursor-pointer group-hover:bg-purple-900 text-xs md:text-md">
             Apply Now
           </button>
-          <button className="bg-white-800 text-purple-800 font-semibold rounded-lg border-2 border-purple-800 p-1 ml-1 md:p-2 md:ml-2 hover:cursor-pointer group-hover:bg-purple-900 group-hover:text-white text-xs md:text-md">
+          <button className="bg-white-800 text-purple-800 font-semibold rounded-lg border-2 border-purple-800 p-1 ml-1 md:p-2 md:ml-2 hover:cursor-pointer group-hover:bg-purple-900 group-hover:text-white text-xs md:text-md " onClick={() => navigate("/jobs-info")}>
             View Details
           </button>
         </div>

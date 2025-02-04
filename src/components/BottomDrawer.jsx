@@ -2,19 +2,11 @@ import { useState } from "react";
 import CollapsibleChecklist from "./CollapsibleChecklist";
 import filtericon from "../assets/filter-icon.svg";
 import filterData from "./filter_data";
+import PropTypes from 'prop-types';
 
-export default function BottomDrawer() {
+export default function BottomDrawer( {selectedItems,setSelectedItems}) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedfilter, setSelectedFilter] = useState("Job Type");
-  const [selectedItems, setSelectedItems] = useState(
-    filterData.reduce((acc, filter) => {
-      filter.items.forEach(item => {
-        acc[item.id] = false;
-      });
-      return acc;
-    }, {})
-  );
-
   const handleCheckboxChange = (itemId) => {
     setSelectedItems(prev => ({
       ...prev,
@@ -23,7 +15,7 @@ export default function BottomDrawer() {
   };
 
   return (
-    <div className="flex items-center items-start min-h-screen bg-gray-100">
+    <div className="flex items-center min-h-screen bg-gray-100">
       {/* Button to Open Drawer */}
       <button
         onClick={() => setIsOpen(true)}
@@ -106,3 +98,8 @@ export default function BottomDrawer() {
     </div>
   );
 }
+
+BottomDrawer.propTypes = {
+  selectedItems: PropTypes.object.isRequired,
+  setSelectedItems: PropTypes.func.isRequired,
+};

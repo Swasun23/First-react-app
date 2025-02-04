@@ -2,15 +2,8 @@ import { ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const CollapsibleChecklist = ({ title = "Topic", items = [] }) => {
+const CollapsibleChecklist = ({ title = "Topic", items = [], selectedItems, setSelectedItems }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [selectedItems, setSelectedItems] = useState(
-    // Create an object with all items initialized to false
-    items.reduce((acc, item) => ({
-      ...acc,
-      [item.id]: false
-    }), {})
-  );
 
   const toggleCollapsible = () => {
     setIsOpen(!isOpen);
@@ -71,7 +64,9 @@ CollapsibleChecklist.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired
     })
-  )
+  ),
+  selectedItems: PropTypes.object.isRequired,
+  setSelectedItems: PropTypes.func.isRequired,  
 };
 
 export default CollapsibleChecklist;

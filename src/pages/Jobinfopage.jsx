@@ -15,6 +15,7 @@ import Footer from "../components/Footer";
 const displayedJobs = jobs.slice(0, 6);
 
 const Jobinfopage = () => {
+  
   return (
     <>
     <div className="bg-purple-100 overflow-hidden min-h-screen">
@@ -83,6 +84,8 @@ const Jobinfopage = () => {
               </body>
             </div>
             {/* <ul className='grid lg:grid-cols-3 gap-4 md:grid-cols-2 ml-3'> */}
+            <div className="flex flex-col">
+            <h className='relative w-sm bg-white my-2 rounded-sm font-extrabold p-4'>Similar jobs</h>
             <ul className='flex flex-row justify-start xs:max-lg:overflow-x-auto xs:max-lgwhitespace-nowrap gap-1 w-full lg:grid lg:grid-cols-2 lg:gap-2 lg:ml-1 xl:grid-cols-3 xl:gap-1 xl:justify-items-center xl:mt-5'>
                 {displayedJobs.map((job, index) => (
                     <li key={index}>
@@ -99,6 +102,7 @@ const Jobinfopage = () => {
                     </li>
                 ))}
             </ul>
+            </div>
           </div>
           <div className='m-1 md:p-3 lg:w-95 2xl:w-175 2xl:m-2'>
             <div className="flex flex-col gap-y-2 mt-1 bg-white rounded-xl p-2 2xl:text-xl">
