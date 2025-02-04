@@ -2,16 +2,23 @@ import Filterdock from '../components/Filterdock'
 import Jobcard from '../components/Job-card'
 import Topbar from '../components/Topbar'
 import jobs from '../components/jobsdata'
+import Navbar from '../components/Navbar'
+import BottomDrawer from '../components/BottomDrawer'
+import Footer from '../components/Footer'
 
 const Mainpage = () => {
   return (
-    <div className='bg-gray-100'>
-        <Topbar />
-        <main className='flex flex-row relative m-auto justify-center mr-75 ml-75 mt-5'>
-            <div className='relative'>
-                <Filterdock/>
+    <div className='bg-gray-100 overflow-hidden lg:text-md'>
+        <div className='flex flex-col'>
+        <Navbar />
+        <main className='flex flex-row relative justify-around sm:justify-between xl:justify-center mx-4 mt-25 '>
+            <div className='lg:hidden'>
+                <BottomDrawer/>
             </div>
-            <ul className='grid lg:grid-cols-3 gap-4 md:grid-cols-2 ml-3'>
+            <div className='hidden lg:block'>
+                <Filterdock />
+            </div>
+            <ul className='grid xl:grid-cols-3 gap-1 s:grid-cols-2 ml-3 s:justify-between justify-items-stretch'>
                 {jobs.map((job, index) => (
                     <li key={index}>
                     <Jobcard
@@ -28,6 +35,11 @@ const Mainpage = () => {
                 ))}
             </ul>
         </main>
+        <div className='mt-5'>
+        <Footer/>
+        </div>
+        
+        </div>
     </div>
     
   )

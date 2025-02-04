@@ -31,3 +31,13 @@
 .animate-scroll-right {
   animation: scrollRight 40s linear infinite;
 }
+
+
+@theme {
+  --breakpoint-xs: 320px;
+  --breakpoint-s : 425px;
+}
+
+.text-fit {
+  font-size: clamp(0.875rem, 5vw, 1.25rem);
+}

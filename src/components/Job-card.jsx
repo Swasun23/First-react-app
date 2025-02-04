@@ -4,15 +4,15 @@ import Likeheart from './Like-heart';
 const Jobcard = ({ companyLogo,companyName, jobLocation, jobRole, description, nPositions, roleType, pay }) => {
   return (
     <>
-      <div className="flex flex-col justify-start h-80 w-80 p-6 bg-white rounded-lg hover:shadow-lg hover:bg-purple-800 hover:text-white duration-200 group">
+      <div className="flex flex-col justify-start p-2 w-45 md:w-70 bg-white rounded-lg hover:shadow-lg hover:bg-purple-800 hover:text-white duration-200 group">
         <div className="flex flex-row justify-between">
           <div className="flex flex-row justify-start ">
             <img
-              className="h-8 w-8 rounded-full mr-5 mb-5"
+              className="h-5 w-5 rounded-full mr-1 mb-1"
               src={companyLogo}
               alt="logo"
             />
-            <p className="mb-5">
+            <p className="mb-1">
               <span className="font-extrabold">{companyName}</span>
               <br />
               <span>{jobLocation}</span>
@@ -22,12 +22,15 @@ const Jobcard = ({ companyLogo,companyName, jobLocation, jobRole, description, n
         </div>
         <div>
           <h2 className="font-extrabold">{jobRole}</h2>
-          <p className="whitespace-pre-wrap line-clamp-3 overflow-hidden">
+          <p
+            className="hidden md:block whitespace-pre-wrap line-clamp-3 overflow-hidden 
+               max-w-[300px] max-h-[100px]"
+          >
             {description}
           </p>
         </div>
         <div>
-          <ul className="flex flex-row justify-start">
+          <ul className="flex flex-row justify-start flex-wrap">
             {[
               {
                 text: `${nPositions} Positions`,
@@ -43,16 +46,20 @@ const Jobcard = ({ companyLogo,companyName, jobLocation, jobRole, description, n
             ].map(({ text, bg, textColor }) => (
               <li
                 key={text}
-                className={`${bg} ${textColor} font-semibold m-1 p-1 text-center rounded-xl text-xs group-hover:bg-purple-900 group-hover:text-white duration-200`}
+                className={`${bg} ${textColor} font-semibold m-1 p-1 text-center rounded-xl text-xs md:m-2 md:p-2 md:text-md group-hover:bg-purple-900 group-hover:text-white duration-200`}
               >
                 {text}
               </li>
             ))}
           </ul>
         </div>
-        <div className='flex flex-row justify-start mt-4'>
-          <button className='bg-purple-800 text-white font-semibold rounded-lg p-2 hover:cursor-pointer group-hover:bg-purple-900 '>Apply Now</button>
-          <button className='bg-white-800 text-purple-800 font-semibold rounded-lg border-1 border-purple-800 p-2 ml-4 hover:cursor-pointer group-hover:bg-purple-900 group-hover:text-white'>View Details</button>
+        <div className="flex flex-row justify-start mt-1 md:ml-2">
+          <button className="bg-purple-800 text-white font-semibold rounded-lg p-0.5 hover:cursor-pointer group-hover:bg-purple-900 text-xs md:text-md">
+            Apply Now
+          </button>
+          <button className="bg-white-800 text-purple-800 font-semibold rounded-lg border-2 border-purple-800 p-1 ml-1 md:p-2 md:ml-2 hover:cursor-pointer group-hover:bg-purple-900 group-hover:text-white text-xs md:text-md">
+            View Details
+          </button>
         </div>
       </div>
     </>

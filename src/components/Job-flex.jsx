@@ -111,19 +111,18 @@ const JobFlex = () => {
     "Cloud Architect",
     "Security Analyst",
     "Network Engineer",
-    "Database Administrator",
   ];
 
   return (
-    <div className="flex flex-col mt-20 mb-20 overflow-hidden">
+    <div className="flex flex-col mt-5 overflow-hidden">
       {/* First row - Left to Right */}
-      <div className="relative h-24 w-full overflow-hidden">
-        <div className="absolute flex justify-center animate-scroll-left whitespace-nowrap">
+      <div className="relative xs:h-12 md:h-18 w-full overflow-hidden">
+        <div className="absolute flex justify-center whitespace-nowrap xs:mb-2 md:mb-3 animate-scroll-left">
           {jobs.concat(jobs).map((job, index) => (
             <button
               key={`job1-${index}`}
-              className="text-black border-1 border-gray-500 h-12 w-60 hover:text-purple-800 
-//                          hover:border-purple-800 rounded-full m-5 whitespace-nowrap"
+              className="text-black border-1 border-gray-500 xs:p-0.5 md:p-1 xs:w-30 xs:text-xs md:w-60 md:text-lg  hover:text-purple-800 
+//                          hover:border-purple-800 rounded-full xs:m-2 md:m-5 whitespace-wrap text-center"
             >
               {job}
             </button>
@@ -132,13 +131,13 @@ const JobFlex = () => {
       </div>
 
       {/* Second row - Right to Left */}
-      <div className="relative h-24 w-full overflow-hidden">
-        <div className="absolute flex justify-center animate-scroll-right whitespace-nowrap">
+      <div className="relative h-24 xs:h-16 w-full overflow-hidden">
+        <div className="absolute flex justify-center whitespace-nowrap animate-scroll-right">
           {jobs.concat(jobs).map((job, index) => (
             <button
               key={`job2-${index}`}
-              className="text-black border-1 border-gray-500 h-12 w-60 hover:text-purple-800 
-//                          hover:border-purple-800 rounded-full m-5 whitespace-nowrap"
+              className="text-black border-1 border-gray-500 xs:p-0.5 md:p-1 xs:w-30 xs:text-xs md:w-60 md:text-lg  hover:text-purple-800 
+//                          hover:border-purple-800 rounded-full xs:m-2 md:m-5 whitespace-wrap text-center"
             >
               {job}
             </button>

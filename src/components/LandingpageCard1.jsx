@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 
-const LandingpageCard1 = ({ img,title, description, height, hoverEnabled }) => {
+const LandingpageCard1 = ({ img,title, description, hoverEnabled }) => {
   return (
-    <div className={` border-gray-400  shadow-lg p-4 ${height ? `h-${height}` : 'h-70'} w-90 rounded-2xl 
-                      ${hoverEnabled ? 'hover:shadow-2xl hover:scale-105 hover:bg-purple-800 hover:text-white transition-transform duration-300' : ''}`} >
+    <div className={`border-gray-400 shadow-lg p-4 rounded-xl 
+                      ${hoverEnabled ? 'hover:shadow-2xl hover:scale-105 hover:bg-purple-800 hover:text-white transition-transform duration-300' : ''} 
+                      h-30 w-30 p-0.5 text-xs md:text-sm md:h-60 md:w-50 md:p-2 overflow-clip aspect-w-4 aspect-h-5`} >
       <img className='h-8' src={img} alt={title} />
-      <h2 className='font-bold mt-6'>{title}</h2>
-      <p className='whitespace-pre-wrap  '>{description}</p>
+      <h2 className='font-bold mt-3 md:mt-6'>{title}</h2>
+      <p className='text-wrap'>{description}</p>
     </div>
   );
 };
@@ -15,7 +16,6 @@ LandingpageCard1.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  height: PropTypes.string,
   hoverEnabled: PropTypes.bool,
 };
 

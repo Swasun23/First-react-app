@@ -18,7 +18,7 @@ const Tabsjob = ({ jobdscrp, jobreq }) => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 text-sm font-medium ${
+            className={`px-4 py-2 text-xs lg:text-lg ${
               activeTab === tab.id ? "border-b-2 border-blue-500 text-blue-500" : "text-gray-500"
             }`}
           >

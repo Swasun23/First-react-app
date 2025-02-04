@@ -3,7 +3,7 @@ import brandicon from "../assets/brand-icon.svg";
 
 const Topbar = () => {
   return (
-    <div className="flex flex-row justify-center font-sans gap-x-4 bg-white">
+    <div className="flex flex-row justify-center font-sans gap-x-4 bg-white flex-grow sticky top-0 z-50">
       <div className="flex flex-row justify-start ">
         <img className="h-25 mr-6" src={brandicon} alt="brand-logo" />
         <div>
